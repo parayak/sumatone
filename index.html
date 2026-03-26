@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alta Gama Motors</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --negro: #0b0b0b;
+    --dorado: #c9a24a;
+    --blanco: #ffffff;
+    --gris: #1c1c1c;
+    --gris-claro: #999;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--negro);
+    color: var(--blanco);
+    font-family: 'Inter', sans-serif;
+}
+
+/* TIPOGRAFÍA */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.9)), url('auto3.png') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+}
+
+.hero p {
+    margin: 20px 0;
+    color: var(--gris-claro);
+    font-size: 1.1rem;
+}
+
+.btn {
+    padding: 14px 40px;
+    border: 1px solid var(--dorado);
+    color: var(--dorado);
+    text-decoration: none;
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    background: var(--dorado);
+    color: var(--negro);
+}
+
+/* SECCIONES */
+section {
+    padding: 90px 10%;
+}
+
+/* BENEFICIOS */
+.beneficios {
+    display: flex;
+    gap: 40px;
+    text-align: center;
+}
+
+.beneficio h3 {
+    margin-bottom: 10px;
+}
+
+/* GALERIA */
+.galeria {
+    display: flex;
+    gap: 25px;
+}
+
+.card {
+    background: var(--gris);
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* FORMULARIO */
+.form-section {
+    background: var(--gris);
+    border-radius: 10px;
+    max-width: 700px;
+    margin: auto;
+    padding: 50px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input, textarea, select {
+    padding: 14px;
+    background: transparent;
+    border: 1px solid #333;
+    color: var(--blanco);
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--dorado);
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+/* CTA */
+.cta {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)), url('auto1.png') center/cover;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: var(--gris-claro);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .beneficios, .galeria {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>Conduce el símbolo de tu éxito</h1>
+        <p>No es un automóvil. Es una declaración de quién eres.</p>
+        <a href="#" class="btn">Descubrir colección</a>
+    </div>
+</section>
+
+<!-- BENEFICIOS -->
+<section>
+    <div class="beneficios">
+        <div>
+            <h3>Selección Curada</h3>
+            <p>Solo vehículos que representan excelencia absoluta</p>
+        </div>
+        <div>
+            <h3>Confianza Total</h3>
+            <p>Certificación rigurosa y transparencia completa</p>
+        </div>
+        <div>
+            <h3>Prestigio</h3>
+            <p>Más que un auto, una inversión en estatus</p>
+        </div>
+    </div>
+</section>
+
+<!-- GALERIA -->
+<section>
+    <h2>Modelos Destacados</h2>
+    <div class="galeria">
+        <div class="card">
+            <img src="auto2.png">
+            <p>Supercar Elite</p>
+        </div>
+        <div class="card">
+            <img src="./auto3png">
+            <p>Luxury Executive</p>
+        </div>
+    </div>
+</section>
+
+<!-- FORMULARIO -->
+<section>
+    <div class="form-section">
+        <h2>Accede a oportunidades exclusivas</h2>
+        <form>
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="tel" placeholder="Teléfono">
+            
+            <select required>
+                <option value="">¿Qué deseas hacer?</option>
+                <option>Comprar un vehículo</option>
+                <option>Vender mi vehículo</option>
+                <option>Inversión / asesoría</option>
+            </select>
+
+            <textarea placeholder="Cuéntanos qué estás buscando..."></textarea>
+
+            <button class="btn" type="submit">Solicitar contacto privado</button>
+        </form>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>El siguiente nivel te espera</h2>
+    <a href="#" class="btn">Hablar con un asesor</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Alta Gama Motors — Exclusividad redefinida</p>
+</footer>
+
+</body>
+</html>
